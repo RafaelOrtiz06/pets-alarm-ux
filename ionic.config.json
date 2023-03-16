@@ -1,8 +1,0 @@
-{
-  "name": "pets-alarm-mobile",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular",
-  "id": "32df2124"
-}
