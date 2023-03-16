@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { LoggedUserGuard } from '@logged-user.guard';
 
 const routes: Routes = [
   {
@@ -8,10 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('@auth/auth.module').then((m) => m.AuthModule)
   },
   {
-    path: 'tabs',
-    loadChildren: () =>
-      import('./tabs/tabs.module').then((m) => m.TabsPageModule),
-    canActivate: [ LoggedUserGuard ]
+    path: 'alarms', 
+    loadChildren: () => import('@alarms/alarms.module').then((m) => m.AlarmsModule),
   },
 ];
 @NgModule({
@@ -20,4 +17,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '@auth/auth.service';
-
-import { AuthStore } from '@auth/auth.store';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,25 +7,13 @@ import { AuthStore } from '@auth/auth.store';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
-  });
-
-  isLoggedIn$ = this.authStore.isLoggedIn$;
-
-  constructor(private authStore: AuthStore, private fb: FormBuilder, private authService: AuthService) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    
+    localStorage.clear();
   }
 
   onSubmit() {
-    const { email } = this.loginForm.value;
-    const isValid = this.authService.validateLogin(this.loginForm.value);
-
-    (isValid) ? this.authStore.login(email) : alert('Invalid Login');
+    this.router.navigate(['/alarms']);
   }
-
- 
 }
