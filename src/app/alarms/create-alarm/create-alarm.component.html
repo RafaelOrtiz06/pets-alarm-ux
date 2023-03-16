@@ -1,3 +1,27 @@
-<p>
-  create-alarm works!
-</p>
+<main class="create-alarm-container">
+  <h1>Create Alarm</h1>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">Name</ion-label>
+    <ion-input placeholder="Alarm's name" type="text"></ion-input>
+  </ion-item>
+
+  <section>
+    <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+  </section>
+
+    <ion-item>
+      <ion-label>Daily</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+
+  <ion-button (click)="createAlarm()">Create</ion-button>
+  <ion-button (click)="return()" color="danger">Return</ion-button>
+
+</main>

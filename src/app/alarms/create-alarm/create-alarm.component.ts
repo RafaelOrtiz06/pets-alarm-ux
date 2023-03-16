@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-alarm',
@@ -7,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAlarmComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    localStorage.clear();
+  }
+
+  createAlarm() {
+    localStorage.setItem('create', 'true');
+
+    this.router.navigate(['/alarms']);
+  }
+
+  return() {
+    this.router.navigate(['/alarms']);
+  }
 
 }

@@ -1,7 +1,7 @@
 <main class="get-alarms-container">
   <section class="get-alarms-header">
     <h1>Alarms</h1>
-    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon (click)="createAlarm()" name="add-circle-outline"></ion-icon>
   </section>
 
   <ng-container *ngIf="!isCreated">
@@ -16,6 +16,17 @@
   </ng-container>
 
   <ng-container *ngIf="isCreated">
-    created
+    <section class="get-alarms-created">
+      <p>8:00 AM</p>
+      <p>Veterinary</p>
+
+      <ion-item>
+        <ion-label>Daily</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+    </section>
   </ng-container>
+
+  <ion-button (click)="return()" color="danger">Return</ion-button>
+
 </main>

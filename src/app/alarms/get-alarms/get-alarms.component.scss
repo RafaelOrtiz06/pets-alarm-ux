@@ -29,4 +29,14 @@
         font-weight: 600;
     }
   }
+
+  &-created {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    min-width: 1rem;
+    border: 1px dashed gray;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
 }

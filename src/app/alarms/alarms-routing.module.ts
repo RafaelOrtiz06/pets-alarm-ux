@@ -5,7 +5,7 @@ import { GetAlarmsComponent } from './get-alarms/get-alarms.component';
 
 const routes: Routes = [
   { path: '', component: GetAlarmsComponent },
-  { path: '', component: CreateAlarmComponent }
+  { path: 'create', component: CreateAlarmComponent }
 ];
 
 @NgModule({
