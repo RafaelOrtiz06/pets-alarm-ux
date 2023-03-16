@@ -1,0 +1,32 @@
+.get-alarms {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75dvh;
+    gap: 5rem;
+    padding: 2rem;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    ion-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+  }
+
+  &-text {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+
+    p {
+        font-weight: 600;
+    }
+  }
+}

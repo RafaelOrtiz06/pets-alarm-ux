@@ -25,3 +25,20 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+html {
+    /* 10px */
+    font-size: 62.5%;
+  }
+  
+  body {
+    /* 16px */
+    font-size: 1.6rem;
+
+    h1 {
+        font-size: clamp(3.6rem, 3.5vw, 5.6rem); 
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+    }
+  }
+  

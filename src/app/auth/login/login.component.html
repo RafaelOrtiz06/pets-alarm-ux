@@ -1,32 +1,15 @@
-<ion-content>
-  <div class="login-container">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <ion-grid [fixed]="true">
-        <img src="../../../assets/icon/pets-alarms.png" alt="Pets Alarm Logo">
-        <ion-row class="ion-align-items-center">
-        <ion-col>
-          <ion-item fill="outline">
-            <ion-label position="floating">Email (admin@admin.com)</ion-label>
-            <ion-input placeholder="Enter email (admin@admin.com)" formControlName="email" type="email"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
+<main class="login-container">
+  <img src="../../../assets/icon/pets-alarms.png" alt="Pets Alarm Logo" />
 
-      <ion-row class="ion-align-items-center">
-        <ion-col>
-          <ion-item fill="outline">
-            <ion-label position="floating">Password (admin)</ion-label>
-            <ion-input placeholder="Enter password (admin)" formControlName="password" type="password"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>  
+  <ion-item fill="outline">
+    <ion-label position="floating">Email (admin@admin.com)</ion-label>
+    <ion-input placeholder="Enter email" type="email"></ion-input>
+  </ion-item>
 
-      <ion-row class="ion-align-items-center">
-        <ion-col>
-          <ion-button [disabled]="loginForm.invalid" expand="block" type="submiy">Login</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
-  </div>
-</ion-content>
+  <ion-item fill="outline">
+    <ion-label position="floating">Password (admin)</ion-label>
+    <ion-input placeholder="Enter password" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="onSubmit()">Login</ion-button>
+</main>

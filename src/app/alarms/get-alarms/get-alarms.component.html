@@ -1,0 +1,21 @@
+<main class="get-alarms-container">
+  <section class="get-alarms-header">
+    <h1>Alarms</h1>
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </section>
+
+  <ng-container *ngIf="!isCreated">
+    <img src="../../../assets/icon/pets-alarms-2.png" alt="Pets Alarms Icon" />
+  
+    <section class="get-alarms-text">
+      <p>You don’t have created alarms</p>
+      <p>
+        Add one clicking in the plus icon and enjoy all the feautres of Pets-Alarms
+      </p>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="isCreated">
+    created
+  </ng-container>
+</main>
